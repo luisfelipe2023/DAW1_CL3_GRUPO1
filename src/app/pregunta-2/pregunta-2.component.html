@@ -1,4 +1,4 @@
-<div class="container">
+<!--<div class="container">
     <h2>Descomposición de Número</h2>
     <div class="form-group">
       <label for="numeroInput">Ingrese un número de 3 cifras:</label>
@@ -12,5 +12,35 @@
         <p class="mb-0">Decenas: {{ decenas }}</p>
       </div>
     </div>
-  </div>
+  </div>-->
+
   
+
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title text-center">Descomposicion de Numeros:</h2>
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <label for="numeros">Número de 3 cifras</label>
+              <input type="number" id="numeros" class="form-control" [(ngModel)]="numero">
+            </div>
+            <br>
+            <button class="btn btn-primary btn-block" (click)="descomponerNumero()">Descomponer Numero</button>
+          </div>
+          <div  class="card-footer">
+            @if (mostrarResultado) {
+          <div class="alert alert-primary" role="alert">
+            <p class="mb-0">Unidades: {{ unidades }}</p>
+            <p class="mb-0">Decenas: {{ decenas }}</p>
+          </div>
+        }
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
