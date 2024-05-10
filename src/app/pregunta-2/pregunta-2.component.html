@@ -1,1 +1,16 @@
-<p>pregunta-2 works!</p>
+<div>
+    <h2>Descomposición de Número</h2>
+    <label for="numeroInput">Ingrese un número de 3 cifras:</label>
+    <input type="number" id="numeroInput" [(ngModel)]="numero">
+    <button (click)="descomponerNumero()">Descomponer</button>
+  
+    <div>
+      @if (mostrarResultado) {
+        <div class="alert alert-primary" role="alert">
+            <p>Unidades: {{ unidades }}</p>
+            <p>Decenas: {{ decenas }}</p>
+          </div>
+      }
+    </div>
+  </div>
+  
