@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./pregunta-3.component.scss']
 })
 export class Pregunta3Component {
-  numero: number = 0; // Definición de la propiedad 'numero'
+  numero: number = 0;
   mensaje: string = '';
 
   verificarNumeroPerfecto(event: Event) {
