@@ -1,0 +1,29 @@
+
+
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title text-center">Llantería</h2>
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <label for="cantidadLlantas">Cantidad de llantas:</label>
+              <input type="number" id="cantidadLlantas" class="form-control" [(ngModel)]="cantidadLlantas">
+            </div>
+            <br>
+            <button class="btn btn-primary btn-block" (click)="calcularTotal()">Calcular total</button>
+          </div>
+          <div  class="card-footer">
+            @if (mostrarResultado) {
+          <div class="alert alert-primary" role="alert">
+            <p class="mb-0">Total a pagar: S/. {{ totalAPagar }}</p>
+          </div>
+        }
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
