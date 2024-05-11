@@ -1,0 +1,17 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-20">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="mt-3 text-center">4. Ingresar un número de 4 dígitos y sumar cada uno de sus dígitos.</h2>
+                </div>
+                <label for="numero" class="mt-3">Ingrese un número:</label>
+                <input type="number" class="form-control" placeholder="Ingrese un número de 4 dígitos" id="numero" [value]="numero" (input)="updateNumero($event)">
+                <button class="btn btn-primary mt-3" (click)="calcularSumaDigitos()">Sumar</button>
+                <div class="alert alert-info" role="alert">
+                    La suma de los dígitos es: {{ sumaDigitos }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
