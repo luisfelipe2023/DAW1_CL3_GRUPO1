@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./pregunta-4.component.scss']
 })
 export class Pregunta4Component {
-  numero: number | null = null; // Inicializamos como null para manejar el caso de que no se haya ingresado ningún valor
+  numero: number | null = null; 
   sumaDigitos: number = 0;
 
   constructor() { }
@@ -14,7 +14,7 @@ export class Pregunta4Component {
   updateNumero(event: Event): void {
     const inputElement = event.target as HTMLInputElement;
     const inputValue = inputElement.value.trim();
-    this.numero = inputValue ? parseInt(inputValue, 10) : null; // Convertimos el valor a número, o asignamos null si no hay ningún valor
+    this.numero = inputValue ? parseInt(inputValue, 10) : null; 
   }
 
   calcularSumaDigitos() {
@@ -25,13 +25,11 @@ export class Pregunta4Component {
 
     const numeroString = this.numero.toString();
 
-    // Verificar que el número ingresado tenga exactamente 4 dígitos
     if (numeroString.length !== 4) {
       alert('El número debe tener exactamente 4 dígitos.');
       return;
     }
-
-    // Sumar cada dígito del número
+//IMPLEMENTACIÓN DE LA SUMA DE DÍGITOS
     this.sumaDigitos = 0;
     for (let i = 0; i < numeroString.length; i++) {
       this.sumaDigitos += parseInt(numeroString[i]);
