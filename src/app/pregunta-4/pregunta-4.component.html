@@ -9,7 +9,7 @@
                 <input type="number" class="form-control" placeholder="Ingrese un número de 4 dígitos" id="numero" [value]="numero" (input)="updateNumero($event)">
                 <button class="btn btn-primary mt-3" (click)="calcularSumaDigitos()">Sumar</button>
                 <div class="alert alert-info" role="alert">
-                    La suma de los dígitos es: {{ sumaDigitos }}
+                    La suma de los dígitos del número ingresado es: {{ sumaDigitos }}
                 </div>
             </div>
         </div>
